@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservar cita | Montero Barbershop</title>
+    <meta
+      name="description"
+      content="Reserva tu cita en Montero Barbershop. Elige servicio y barbero antes de continuar a Fresha."
+    />
+    <meta name="theme-color" content="#080808" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="booking-page">
+    <header class="site-header booking-header">
+      <nav class="main-nav nav-left booking-nav" aria-label="Navegación izquierda">
+        <a href="/">Inicio</a>
+        <a href="/#servicios">Servicios</a>
+      </nav>
+      <a class="brand" href="/" aria-label="Volver a Montero Barbershop">
+        <img class="brand-logo" src="/assets/montero-logo-clean.png" alt="Logo Montero Barbershop" />
+      </a>
+      <nav class="main-nav nav-right booking-nav" aria-label="Navegación derecha">
+        <a href="/#estilos">Looks</a>
+        <a href="/#barberia">Barbería</a>
+      </nav>
+      <a class="header-cta" href="/">Volver</a>
+    </header>
+
+    <main class="booking-shell booking-app-shell">
+      <section class="booking-hero booking-app">
+        <form class="booking-form booking-app-card reveal" data-booking-form>
+          <div class="booking-app-top">
+            <img class="booking-logo" src="/assets/montero-logo-clean.png" alt="Montero Barbershop" />
+            <div>
+              <span class="section-label">Reserva online</span>
+              <h1>Reserva tu cita</h1>
+              <p>Elige un servicio, selecciona tu barbero y confirma la hora en Fresha.</p>
+            </div>
+          </div>
+
+          <div class="booking-steps" aria-label="Progreso de reserva">
+            <span class="booking-step is-active" data-step-dot="1">1 Servicio</span>
+            <span class="booking-step" data-step-dot="2">2 Barbero</span>
+          </div>
+
+          <section class="booking-screen is-active" data-booking-screen="services">
+            <div class="booking-screen-head">
+              <span class="section-label">Paso 1</span>
+              <h2>Selecciona un servicio</h2>
+            </div>
+            <fieldset class="booking-options-grid service-app-grid">
+              <legend>Servicios disponibles</legend>
+              <label class="booking-option booking-tile service-tile">
+                <input type="radio" name="service" value="Corte de pelo" />
+                <span class="tile-icon"><i data-lucide="scissors"></i></span>
+                <span><strong>Corte de pelo</strong><small>Desde 15€ · 30-45 min</small></span>
+              </label>
+              <label class="booking-option booking-tile service-tile">
+                <input type="radio" name="service" value="Degradado / Fade" />
+                <span class="tile-icon"><i data-lucide="waves"></i></span>
+                <span><strong>Degradado / Fade</strong><small>Desde 18€ · acabado preciso</small></span>
+              </label>
+              <label class="booking-option booking-tile service-tile">
+                <input type="radio" name="service" value="Arreglo de barba" />
+                <span class="tile-icon"><i data-lucide="user-round-check"></i></span>
+                <span><strong>Arreglo de barba</strong><small>Desde 12€ · perfilado y rebaje</small></span>
+              </label>
+              <label class="booking-option booking-tile service-tile">
+                <input type="radio" name="service" value="Corte + barba" />
+                <span class="tile-icon"><i data-lucide="sparkles"></i></span>
+                <span><strong>Corte + barba</strong><small>Desde 25€ · servicio completo</small></span>
+              </label>
+              <label class="booking-option booking-tile service-tile">
+                <input type="radio" name="service" value="Perfilado" />
+                <span class="tile-icon"><i data-lucide="pen-tool"></i></span>
+                <span><strong>Perfilado</strong><small>Desde 8€ · líneas limpias</small></span>
+              </label>
+              <label class="booking-option booking-tile service-tile">
+                <input type="radio" name="service" value="Asesoramiento de estilo" />
+                <span class="tile-icon"><i data-lucide="message-circle"></i></span>
+                <span><strong>Asesoramiento</strong><small>Incluido · look personalizado</small></span>
+              </label>
+            </fieldset>
+            <p class="booking-error" data-booking-error="services" hidden>Selecciona al menos un servicio para continuar.</p>
+            <button class="btn btn-primary booking-submit" type="button" data-next-booking>Elegir barbero</button>
+          </section>
+
+          <section class="booking-screen" data-booking-screen="barber">
+            <div class="booking-screen-head">
+              <span class="section-label">Paso 2</span>
+              <h2>Elige tu barbero</h2>
+            </div>
+            <fieldset class="booking-options-grid barber-grid barber-app-grid">
+              <legend>Barberos disponibles</legend>
+              <label class="booking-option booking-tile barber-tile">
+                <input type="radio" name="barber" value="Lucía Vega" />
+                <img src="/assets/barber-lucia.webp" alt="Lucía Vega, barbera en Montero Barbershop" />
+                <span><strong>Lucía Vega</strong><small>Especialista en acabado natural y asesoramiento</small></span>
+              </label>
+              <label class="booking-option booking-tile barber-tile">
+                <input type="radio" name="barber" value="Mateo Cruz" />
+                <img src="/assets/barber-mateo.webp" alt="Mateo Cruz, barbero en Montero Barbershop" />
+                <span><strong>Mateo Cruz</strong><small>Fade, barba y cortes de precisión</small></span>
+              </label>
+              <label class="booking-option booking-tile barber-tile">
+                <input type="radio" name="barber" value="Álex Romero" />
+                <img src="/assets/barber-adrian.webp" alt="Álex Romero, barbero en Montero Barbershop" />
+                <span><strong>Álex Romero</strong><small>Corte clásico, taper y estilo limpio</small></span>
+              </label>
+              <label class="booking-option booking-tile barber-tile">
+                <input type="radio" name="barber" value="Diego Montero" />
+                <img src="/assets/barber-diego.webp" alt="Diego Montero, barbero en Montero Barbershop" />
+                <span><strong>Diego Montero</strong><small>Barba, degradado y acabado premium</small></span>
+              </label>
+            </fieldset>
+            <div class="booking-summary" data-booking-summary>Servicios seleccionados: ninguno</div>
+            <p class="booking-error" data-booking-error="barber" hidden>Selecciona un barbero para continuar.</p>
+            <div class="booking-actions-row">
+              <button class="btn btn-secondary" type="button" data-prev-booking>Volver</button>
+              <button class="btn btn-primary booking-submit" type="submit">Continuar a Fresha</button>
+            </div>
+          </section>
+          <p class="booking-note">Te llevaremos a Fresha para terminar la reserva de forma segura.</p>
+        </form>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>
